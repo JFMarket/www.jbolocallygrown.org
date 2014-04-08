@@ -1,0 +1,11 @@
+- name: restart nginx
+  sudo: true
+  service: name=nginx state=restarted
+
+- name: reload nginx
+  sudo: true
+  service: name=nginx state=reloaded
+
+- name: reload php5-fpm
+  sudo: true
+  service: name=php5-fpm state=reloaded
