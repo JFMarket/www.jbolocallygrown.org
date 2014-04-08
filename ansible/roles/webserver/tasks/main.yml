@@ -1,3 +1,5 @@
+---
+
 - name: Copy jbolocallygrown nginx config to sites-available
   copy: src=www.jbolocallygrown.org.conf dest=/etc/nginx/sites-available/www.jbolocallygrown.org.conf
 

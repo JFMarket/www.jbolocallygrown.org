@@ -3,11 +3,4 @@
 - hosts: all
   remote_user: root
   roles:
-    - laggyluke.nginx
     - webserver
-
-  tasks:
-    - name: Install packages
-      apt: pkg={{ item }} state=latest update_cache=yes
-      with_items:
-        - python-apt
