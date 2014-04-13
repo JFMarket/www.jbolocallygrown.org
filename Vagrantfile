@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+require 'rbconfig'
+
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
@@ -16,14 +18,25 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "https://vagrantcloud.com/f500/ubuntu-saucy64/version/1/provider/virtualbox.box"
 
-  config.vm.provision "ansible" do |ansible|
-    ansible.extra_vars = { 
-      ansible_ssh_user: 'vagrant',
-    }
+  playbook = "ansible/site.yml"
+  inventory = "vagrant_ansible_inventory_default"
 
-    ansible.sudo = true
+  is_windows = (RbConfig::CONFIG['host_os'] =~ /mswin|mingw|cygwin/)
+  if is_windows
+    config.vm.provision "shell" do |sh|
+      sh.path = "ansible/windows.sh"
+      sh.args = "#{playbook} #{inventory}"
+    end
+  else
+    config.vm.provision "ansible" do |ansible|
+      ansible.extra_vars = {
+        ansible_ssh_user: 'vagrant',
+      }
 
-    ansible.playbook = "ansible/site.yml"
+      ansible.sudo = true
+
+      ansible.playbook = "#{playbook}"
+    end
   end
 
   # Create a forwarded port mapping which allows access to a specific port
