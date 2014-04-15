@@ -17,6 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
   config.vm.box_url = "https://vagrantcloud.com/f500/ubuntu-saucy64/version/1/provider/virtualbox.box"
+  
 
   playbook = "ansible/site.yml"
   inventory = "vagrant_ansible_inventory_default"
