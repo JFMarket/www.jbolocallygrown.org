@@ -1,4 +1,4 @@
-Developing on Mac OSx or Linux
+Developing on Mac OSX or Linux
 ==============================
 1. Clone this repo, then go to that directory
 2. Run `vagrant up`
@@ -29,6 +29,10 @@ Setup
 
 Errors?
 -------
-1. Inifinite Timeout? (Check to make sure you have virtualization enabled in BIOS for VirtualBox in Windows)
-2. Can't SSH? ((run `vagrant ssh-config` in the folder with the vagrantfile to see how) Make sure you have converted the private key to a ppk that putty can use and the machine is running, `vagrant status`)
+1. Infinite Timeout? (Check to make sure you have virtualization enabled in BIOS for VirtualBox in Windows)
+2. Can't SSH? ((run `vagrant ssh-config` in the folder with the Vagrantfile to see how) Make sure you have converted the private key to a ppk that putty can use and the machine is running, `vagrant status`)
 3. Still having problems? (Contact Ryan Robeson)
+
+Git
+===
+[Checkout pull requests locally to test before accepting.](https://help.github.com/articles/checking-out-pull-requests-locally)
