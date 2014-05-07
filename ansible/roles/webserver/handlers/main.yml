@@ -1,4 +1,0 @@
----
-- name: reload php5-fpm
-  sudo: true
-  service: name=php5-fpm state=reloaded
