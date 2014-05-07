@@ -1,0 +1,1 @@
+<h2><?php echo lang('shift_add'); ?></h2>
