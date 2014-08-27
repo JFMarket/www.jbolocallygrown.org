@@ -87,5 +87,5 @@ define('LOGGED_IN_SALT',   'y<m,4UFaAC0!cJ^rn]n-6b-qeoH5Jv-@osq4d$$WV,=ME/-#?-j1
 define('NONCE_SALT',       '|~9<rj))r|(2#e;fZwHh10-=/U)@A|`Hg4-sNDX7rBS{*Q_,~Ha|J*}&<(x+H(M9');
 define('DB_NAME', 'wordpress');
 define('DB_USER', 'wordpress');
-define('DB_PASSWORD', 'zTFiBYGIZK');
+define('DB_PASSWORD', 'FcMjOPlwWu');
 require_once(ABSPATH . 'wp-settings.php');

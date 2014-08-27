@@ -27,8 +27,8 @@ This site is developed on Digital Ocean's Wordpress instance. Local development 
       1. Replace *107.170.124.125*
       1. With *127.x.x.x*
       1. DB name *wordpress*
-      1. user *root*
-      1. pass is blank
+      1. user _default_ 
+      1. pass _default_
       1. host *localhost*
       1. *all tables*
       1. Click *live run*
